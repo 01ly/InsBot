@@ -10,7 +10,7 @@
     * w3lib    
     * requests-toolbelt       
  
- You can install the requirements by：`python install requirements.py`
+ You can install the requirements by：`pip install -r requirements.txt`
 ## API
 *  **[Accounts Login](accounts-login)**   
     * [x] user login

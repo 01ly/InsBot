@@ -1,0 +1,4 @@
+pymongo
+requests
+requests-toolbelt
+w3lib
