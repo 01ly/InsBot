@@ -1,4 +1,10 @@
 # InsBot
+![license](https://img.shields.io/bower/l/boostrap.svg?label=license&logo=mit&style=popout)
+![version](https://img.shields.io/pypi/v/nine.svg?label=Python3%20InsBot)
+![maintaining](https://img.shields.io/maintenance/yes/2019.svg?label=maintaining)
+![dependency](https://img.shields.io/david/dev/expressjs/express.svg)
+
+
   An instagram robot which provides all kinds of **APIs** for you to **interact** with your personal Instagram accounts and makes it easier to **grab user data** online without/with login.
   >  **NOTE: I'm not responsible for the results of using this tool or anything happens to your accounts.**
 ##  Dependency 
@@ -106,4 +112,11 @@ account.login()
 > * add get user following tags
 > * add get posts of a specified tag
 > * add follow tags
+> 
+> UPDATE:2019/03/11
+> * add get posts of locations
+> * add discover posts
+> 
+> **NOTE**:The Ins account you logined by InsBot will be banned if you make it like a fake account by posting same pictures or repeating same acts with 0 delays.
+
 

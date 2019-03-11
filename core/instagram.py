@@ -74,8 +74,11 @@ class Instagram:
 				logger.info('Logout successfully~')
 
 	@choose(None,api=1,method='get',out=True)
-	def info(self):
-		url = API_USER_JSON_INFO.format(userId=self.user_id)
+	def info(self,details=False):
+		if not details:
+			url = API_USER_JSON_INFO.format(userId=self.user_id)
+		else:
+			url = API_USER_INFO.format(username=self.user)
 		tips = {
 			'ok':f'Get account infos successfully!',
 			'failed':f'Get account infos failed.',
@@ -798,9 +801,10 @@ class Instagram:
 		return getattr(self,_property)
 
 a = Instagram()
+logger.info(a.info(details=True))
 # d = a.get_comment_likers('17967358843242707',save=True)
-# d=a.get_media_likers('Bu1X22slU9d')
-# d = a.add_comment('This is posted by InsBot.',short_code='Buyrl8ABcG_',to='17860290796353848')
+# d=a.get_media_likers('BuxpYvdFtfP',count=10)
+# d = a.add_comment('This is posted by InsBot.GitHub:01ly/InsBot.',short_code='BuxpYvdFtfP')
 # print(d)
 # a.unlike_comment('17949756184248517')
 # a.delete_media(short_code='ButZGujBt8
@@ -817,13 +821,13 @@ a = Instagram()
 # print(a.get_user_following_tags('stevenfurtick'))
 # a.follow_tag('anglebaby')
 # print(a.info())
-# a.get_account_activity()
 # a.enable_presence()
 # a.login()
 # a.logout()
 # c = a.post_photo(r'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80',caption=f'Posted by InsBot at {time.ctime()}')
 # print(c)
 # dd = a.get_activity_notify()
+# a.mark_checked()
 # dd = a.search_location('NewYork')
 # dd = a.upload_picture(r'D:\projects\1.jpeg')
 # print(dd)
